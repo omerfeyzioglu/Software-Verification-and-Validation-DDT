@@ -22,13 +22,13 @@ class CalculatorTest {
 
     Calculator calculator;
 
-    @BeforeEach    //@BeforeAll used to use only once(need static method)
+    @BeforeEach    //@BeforeAll can be used to use only once(need static method)
      void setUp() {
         calculator = new Calculator();
         System.out.println("setup called");
     }
 
-    @AfterEach //@AfterAll used to use only once(need static method)
+    @AfterEach   //@AfterAll can be used to use only once(need static method)
      void cleanUp(){
         calculator = null;
         System.out.println("cleanup called");
