@@ -13,19 +13,24 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CalculatorTest {
 
-    Calculator calculator;
+    static Calculator calculator;
 
-    @BeforeEach    //@BeforeAll can be used to use only once(need static method)
-     void setUp() {
+    /*
+    * @BeforeAll and @Afterall annotation are used cause of same Calculator object
+    * is used for all test steps.
+    * */
+    @BeforeAll
+    static  void setUp() {
         calculator = new Calculator();
         System.out.println("setup called");
     }
 
-    @AfterEach   //@AfterAll can be used to use only once(need static method)
-     void cleanUp(){
+    @AfterAll
+    static void cleanUp(){
         calculator = null;
         System.out.println("cleanup called");
     }
+
         @ParameterizedTest
         @CsvSource({
                 "5, 10, 2",
