@@ -16,9 +16,10 @@ class CalculatorTest {
     static Calculator calculator;
 
     /*
-    * @BeforeAll and @Afterall annotation are used cause of same Calculator object
-    * is used for all test steps.
-    * */
+    * @BeforeAll and @AfterAll annotation are used cause of same Calculator object
+    * is used for all test steps and the test class is better organized and the tests
+    * are made safer.
+     */
     @BeforeAll
     static  void setUp() {
         calculator = new Calculator();
